@@ -1,9 +1,9 @@
-checkpoint_dir: PATH_TO_PRETRAINED_CHECKPOINT
-test_save_path: PATH_TO_SAVE_TEST_IMAGE
-bs: 48
+checkpoint_dir: "/localhome/local-chrislin/vla/BridgeVLA-FT/outputs/checkpoints/pretrain"
+test_save_path: "/localhome/local-chrislin/vla/BridgeVLA-FT/outputs/test_images"
+bs: 32
 lr: 5e-5
-exp_name: debug
-output_dir: PATH_TO_SAVE_OUTPUT
+exp_name: baseline_bridgevla_pretrain
+output_dir: "/localhome/local-chrislin/vla/BridgeVLA-FT/outputs/pretrain"
 num_train_epochs: 8
 gradient_accumulation_steps: 1
 warmup_steps: 400
@@ -11,6 +11,10 @@ save_steps: 1000
 logging_steps: 10
 dataloader_num_workers: 8
 save_total_limit: 30
+
+# Wandb
+wandb_entity: "crlc112358"
+wandb_project: "BridgeVLA-FT-Pretrain"
 
 
 

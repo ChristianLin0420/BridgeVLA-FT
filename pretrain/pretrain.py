@@ -654,8 +654,8 @@ class Pretrain_RoboPoint_Palligemma:
             import wandb
             wandb.login(key="")
             wandb.init(
-                entity="",
-                project="",
+                entity=self.config["wandb_entity"],
+                project=self.config["wandb_project"],
                 name=exp_name,
                 config=vars(args),
             )

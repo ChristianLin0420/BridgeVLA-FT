@@ -1,7 +1,7 @@
 cd  pretrain
-port=MASTER_PORT
-GPUS_PER_NODE=NUMBER_OF_GPU_PER_MACHINE
-NNODES=NUMBER_OF_MACHINE
+port=29500
+GPUS_PER_NODE=1
+NNODES=1
 torchrun \
     --nnodes=$NNODES \
     --nproc_per_node=$GPUS_PER_NODE \

@@ -1,5 +1,5 @@
 
-cd BridgeVLA/finetune
+cd ../finetune
 pip install -e .
 pip install -q -U transformers datasets peft bitsandbytes
 pip3 install peft

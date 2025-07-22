@@ -1,0 +1,10 @@
+
+# Outputs
+outputs/
+
+# Info
+finetune/bridgevla.egg-info/
+finetune/bridgevla.egg-info/
+
+# Wandb
+wandb/
