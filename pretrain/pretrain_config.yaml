@@ -1,19 +1,60 @@
-checkpoint_dir: "/localhome/local-chrislin/vla/BridgeVLA-FT/outputs/checkpoints/pretrain"
-test_save_path: "/localhome/local-chrislin/vla/BridgeVLA-FT/outputs/test_images"
-bs: 32
-lr: 5e-5
+# =============================================================================
+# BridgeVLA Fine-tuning Pretraining Configuration
+# =============================================================================
+
+# Experiment Configuration
 exp_name: baseline_bridgevla_pretrain
+
+# =============================================================================
+# Directory Paths
+# =============================================================================
+checkpoint_dir: "/localhome/local-chrislin/vla/BridgeVLA-FT/outputs/checkpoints/pretrain"
 output_dir: "/localhome/local-chrislin/vla/BridgeVLA-FT/outputs/pretrain"
+test_save_path: "/localhome/local-chrislin/vla/BridgeVLA-FT/outputs/test_images"
+
+# =============================================================================
+# Training Hyperparameters
+# =============================================================================
+# Batch size for training
+bs: 32
+
+# Learning rate for optimization
+lr: 5e-5
+
+# Number of training epochs
 num_train_epochs: 8
+
+# Gradient accumulation steps (effective batch size = bs * gradient_accumulation_steps)
 gradient_accumulation_steps: 1
+
+# Number of warmup steps for learning rate scheduler
 warmup_steps: 400
-save_steps: 1000
+
+# =============================================================================
+# Logging and Checkpointing
+# =============================================================================
+# Save model checkpoint every N steps
+save_steps: 10000
+
+# Log metrics every N steps
 logging_steps: 10
-dataloader_num_workers: 8
+
+# Maximum number of checkpoints to keep (older ones will be deleted)
 save_total_limit: 30
 
-# Wandb
+# =============================================================================
+# Data Loading Configuration
+# =============================================================================
+# Number of worker processes for data loading
+dataloader_num_workers: 8
+
+# =============================================================================
+# Weights & Biases (WandB) Configuration
+# =============================================================================
+# WandB entity (username or team name)
 wandb_entity: "crlc112358"
+
+# WandB project name for experiment tracking
 wandb_project: "BridgeVLA-FT-Pretrain"
 
 

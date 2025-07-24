@@ -1,4 +1,4 @@
-exp_id: debug
+exp_id: rlbench
 tasks: all
 bs: 4
 num_workers: 3
